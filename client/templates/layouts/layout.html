@@ -1,0 +1,29 @@
+<template name="layout">
+
+    <div class="ui left vertical labeled icon sidebar menu" id="left-menu">
+        <a href="" class="item">
+            <i class="block layout icon"></i>
+            HomePage
+        </a>
+        <a  href="{{pathFor 'ingredientsIndex'}}" class="item">
+            <i class="mail icon"></i>
+            Ingredients
+        </a>
+        <a class="item">
+            <i class="icon mail"></i> Messages
+            <div class="ui teal top right attached label">33</div>
+        </a>
+        <a class="item">
+            <i class="icon users"></i> Friends
+            <div class="ui teal top right attached label">33</div>
+        </a>
+    </div>
+
+
+    <div class="pusher">
+        {{> header}}
+        {{> yield}}
+        {{> footer}}
+    </div>
+
+</template>

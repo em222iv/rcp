@@ -1,0 +1,40 @@
+<template name="ingredientShow">
+
+    <div class="ui top attached tabular menu">
+        <a id="list-ingredients-tab" class="item active">
+            {{title}}
+        </a>
+        <a id="all-ingredients-tab" class="item">
+            All Ingredients
+        </a>
+        <div class="right menu">
+            <div class="item">
+                <div class="ui transparent icon input">
+                    <input type="text" placeholder="Search users...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui bottom attached segment">
+        <div id="list-ingredients-list">
+            {{title}}
+        </div>
+        <div id="all-ingredients-list">
+            <div class="ui small aligned divided list">
+                {{#each ingredients}}
+                    <div class="item">
+                        <div class="right floated content">
+                            <div class="ui button">Add</div>
+                        </div>
+                        <i class="pointing right icon"></i>
+                        <div class="content">
+                            {{name}}
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+</template>

@@ -1,0 +1,63 @@
+<template name="listsIndex">
+
+    <div id="lists-top" class="ui sticky fixed top column">
+        <div id="lists-top-segment" class="ui segment">
+
+            <a id="new-list" class="ui bottom left attached teal label">Add List</a>
+
+            <a class="ui bottom right attached label">
+                <div class="item">
+                    <div class="ui transparent icon input">
+                        <input type="text" placeholder="filter lists...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+            </a>
+            <img class="ui wireframe image" src="/img/media-paragraph.png">
+        </div>
+        <div class="" id="lists-divider">
+            <div  class="ui horizontal divider">
+                Lists
+            </div>
+        </div>
+    </div>
+
+    <div id="lists-grid" class="ui grid">
+        <div class="ui relaxed divided list">
+            {{#each lists}}
+                <div class="item">
+                    <div class="right floated content">
+                        <a class="ui circular violet icon button" href="{{pathFor 'listShow' }}" >
+                            <i class="chevron down icon"></i>
+                        </a>
+                        <!--<button class="ui circular teal icon button">-->
+                            <!--<i class="sort content descending icon"></i>-->
+                        <!--</button>-->
+                        <button class="ui circular green icon button">
+                            <i class="archive icon"></i>
+                        </button>
+                        <button class="ui circular google plus icon button  remove-list-element">
+                            <i class="remove icon"></i>
+                        </button>
+                        <!--<div class="ui small basic icon buttons">-->
+                            <!--<button class="ui button"><i class="move icon"></i></button>-->
+                            <!--<button class="ui button"><i class="move icon"></i></button>-->
+                            <!--<button class="ui button remove-list-element"><i class="remove icon"></i></button>-->
+                        <!--</div>-->
+                    </div>
+                    <img class="ui avatar image" src="/img/dog.jpg">
+                    <div class="middle aligned content">
+                        <form class="ui form">
+                            <input id="list-title" class="list-title-update" type="text" placeholder="{{title}}">
+                        </form>
+                    </div>
+                </div>
+            {{else}}
+                No Lists
+            {{/each}}
+            <div  class="ui horizontal divider">
+                Archived Lists
+            </div>
+        </div>
+    </div>
+</template>

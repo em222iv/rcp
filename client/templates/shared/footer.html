@@ -1,0 +1,23 @@
+<template name="footer">
+    <div class="ui grid">
+        <a class="item" id="left-toggle">
+            <i class="block layout icon"></i>
+            Topics
+        </a>
+        <div class="ui deep bottom labeled three item sidebar menu visible"  id="bottom-menu">
+            <a class="massive item" href="{{pathFor 'home'}}" data-transition="overlay" id="left-toggle">
+                <i class="medium home icon"></i>
+                Home
+            </a>
+            <a class="item" href="{{pathFor 'listsIndex'}}" id="top-toggle">
+                <i class="block layout icon"></i>
+                Lists
+            </a>
+            <a class="item" id="right-toggle">
+                <i class="smile icon"></i>
+                Friends
+            </a>
+        </div>
+    </div>
+
+</template>

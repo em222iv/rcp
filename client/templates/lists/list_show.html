@@ -1,0 +1,64 @@
+<template name="listShow">
+    <div id="lists-top" class="ui sticky fixed top column">
+        <div id="lists-top-segment" class="ui segment">
+
+
+            <div class="ui card">
+                <div class="content">
+                    <div class="right floated meta">14 Items</div>
+                    <img class="ui avatar image" src="/img/dog.jpg"> {{title}}
+                </div>
+                <div class="extra content">
+                    <a class="ui bottom left attached label">
+                        <div class="item">
+                            <div class="ui transparent icon input">
+                                <div class="ui left icon input">
+                                    <input type="text" placeholder="filter...">
+                                    <i class="search icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="ui bottom right attached label">
+                        <div class="item">
+                            <div class="ui transparent icon input">
+                                <div class="ui transparent icon input">
+                                    <form class="">
+                                        <input id="name" type="text" placeholder="Add...">
+                                        <i id="ingredient-add" class="plus icon"></i>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="" id="lists-divider">
+            <div  class="ui horizontal divider">
+                Ingredients
+            </div>
+        </div>
+    </div>
+    <div id="lists-grid" class="ui grid">
+        <div class="ui middle aligned divided list">
+            {{#each ingredients}}
+                <div class="item">
+                    <div class="right floated content">
+                        <div class="ui mini button remove-ingredient">Rem</div>
+                    </div>
+                    <img class="ui avatar image" src="/img/dog.jpg">
+                    <div class="content">
+                        <a class="header">{{name}}</a>
+                    </div>
+                </div>
+            {{else}}
+                No Lists
+            {{/each}}
+            <div  class="ui horizontal divider">
+                Ingredients
+            </div>
+        </div>
+    </div>
+
+</template>

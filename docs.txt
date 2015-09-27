@@ -1,0 +1,8 @@
+*****Folder info*****
+Client -  All code in this folder will be executed on the client
+Server - All code in this folder will be executed on the server
+Both - Router (Using iron:router)
+Lib - Collections
+Private - Certificates and private keys all goes here to keep them secret
+Public - All images goes here and are referenced to by /image.png
+        - Image src defaults to public folder
